@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Prediction — डेमो (कोई पैसा नहीं)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">CP</div>
+      <div class="title">
+        <h1>Color Prediction — डेमो</h1>
+        <p class="muted">शिक्षात्मक सिम्युलेटर — रियल मनी नहीं</p>
+      </div>
+      <div class="theme-switch">
+        <button id="themeToggle">डार्क/लाइट</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="left card">
+        <div class="panel">
+          <div class="label">रंग चुनें</div>
+          <div id="colors" class="colors"></div>
+          <div class="selected muted" id="selectedText">चुना हुआ: —</div>
+        </div>
+
+        <div class="panel controls">
+          <div class="row">
+            <label>स्टेक</label>
+            <input id="stake" type="number" value="10" min="1">
+            <label>इंटरवल (सेकंड)</label>
+            <select id="interval">
+              <option value="30">30</option>
+              <option value="60" selected>60</option>
+              <option value="120">120</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <button id="manual" class="primary">मैन्युअल ड्रॉ</button>
+            <button id="auto" class="ghost active">ऑटो: ON</button>
+            <button id="reset" class="danger">रीसेट</button>
+          </div>
+        </div>
+
+        <div class="panel stats">
+          <div class="stat-row">
+            <div><div class="stat-label">राउंड</div><div id="rounds" class="stat-value">0</div></div>
+            <div><div class="stat-label">विन</div><div id="wins" class="stat-value">0</div></div>
+            <div><div class="stat-label">लॉस</div><div id="losses" class="stat-value">0</div></div>
+            <div><div class="stat-label">विन %</div><div id="winpct" class="stat-value">0%</div></div>
+          </div>
+          <div class="balance">बैलेंस (डेमो): <span id="balance">1000</span></div>
+        </div>
+      </section>
+
+      <aside class="right card">
+        <div class="panel">
+          <div class="label">लेटेस्ट रिज़ल्ट</div>
+          <div id="latest" class="latest">—</div>
+          <div id="timer" class="timer">60</div>
+        </div>
+
+        <div class="panel history">
+          <div class="label">हिस्ट्री (नवीनतम ऊपर)</div>
+          <div id="history" class="history-list"></div>
+        </div>
+
+        <div class="panel notes muted">
+          <strong>नोट:</strong> यह एक सिखने वाला डेमो है — कोई वास्तविक पैसा नहीं। पिछले ड्रॉ भविष्य पर असर नहीं डालते।
+        </div>
+      </aside>
+    </main>
+
+    <footer class="foot muted">
+      तैयार किया गया — GitHub Pages के लिए रेडी। चाहिए तो मैं यह repo तुम्हारे लिए ZIP कर दूँ और डिप्लॉय गाइड भी जोड़ दूँ: <strong>Bhoi123/Bhoi1235</strong>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
